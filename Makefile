@@ -18,12 +18,11 @@ ex02:
 	./ex02/ex02
 
 ex03:
-	g++ -Wall -Wextra -Werror ex03/main.cpp -o ex03/ex03
+	g++ -Wall -Wextra -Werror ex03/main.cpp ex03/Socio.cpp -o ex03/ex03
 	./ex03/ex03
 
 ex04:
-	g++ -Wall -Wextra -Werror ex04/main.cpp -o ex04/ex04
-	./ex04/ex04
+	echo "Just an abstract class, no need to run it"
 
 ex05:
 	g++ -Wall -Wextra -Werror ex05/main.cpp -o ex05/ex05
