@@ -21,7 +21,7 @@ int main()
     {
         formas[i] = new Triangulo(rand() % 10 + 1, rand() % 10 + 1);
         std::cout << "Forma " << i << "\n"
-                  << formas[i] << std::endl;
+                  << *dynamic_cast<Triangulo *>(formas[i]) << std::endl;
     }
 
     std::cout << "Number of rectangles: " << number_rectangles << std::endl;
@@ -29,14 +29,14 @@ int main()
     {
         formas[i] = new Rectangulo(rand() % 10 + 1, rand() % 10 + 1);
         std::cout << "Forma " << i << "\n"
-                  << formas[i] << std::endl;
+                  << *dynamic_cast<Rectangulo *>(formas[i]) << std::endl;
     }
     std::cout << "Number of squares: " << number_squares << std::endl;
     for (int i = number_triangles + number_rectangles; i < number_triangles + number_rectangles + number_squares; i++)
     {
         formas[i] = new Cuadrado(rand() % 10 + 1);
         std::cout << "Forma " << i << "\n"
-                  << formas[i] << std::endl;
+                  << *dynamic_cast<Cuadrado *>(formas[i]) << std::endl;
     }
     std::cout << "Solution" << std::endl;
 
